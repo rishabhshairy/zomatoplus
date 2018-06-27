@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.UniqueElements;
+
 import java.io.Serializable;
 
 import javax.persistence.*;
@@ -16,7 +18,7 @@ public class Users implements Serializable{
 	@GeneratedValue
 	private long id;
 	
-	@Column(name="name")
+	@Column(name="name",unique=true)
 	private String name;
 	
 	@Column(name="pwd")

@@ -54,7 +54,8 @@ public class UserController {
 	 
 	 @PostMapping("/login")
 	 public Users userLogin(@RequestBody Users user) {
-		return user;
+		       
+		return userRepo.findByNameAndPwd("abc","abc");
 		 
 	 }
 	
