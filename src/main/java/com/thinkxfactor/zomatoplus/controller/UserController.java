@@ -46,7 +46,7 @@ public class UserController {
 		//Users u1=new Users( "Rishabh", "1234","abc@gmail.com", "987654123",5);
 		 
 		 userRepo.saveAndFlush(user);
-		 System.out.println(user.toString());
+		// System.out.println(user.toString());
 		 
 		 return user;
 		 

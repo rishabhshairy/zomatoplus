@@ -11,13 +11,13 @@ public class Items implements Serializable{
 	private long id;
 	
 	@Column(name="restaurant_id")
-	private long restaurantId;
+	private String restaurantId;
 	
 	@Column(name="name")
 	private String name;
 	
 	@Column(name="price")
-	private double price;
+	private String price;
 	
 	@Column(name="description")
 	private String description;
@@ -31,7 +31,7 @@ public class Items implements Serializable{
 
 
 
-	public Items(long id, long restaurantId, String name, double price, String description) {
+	public Items(long id, String restaurantId, String name, String price, String description) {
 		super();
 		this.id = id;
 		this.restaurantId = restaurantId;
@@ -54,13 +54,13 @@ public class Items implements Serializable{
 
 
 
-	public long getRestaurantId() {
+	public String getRestaurantId() {
 		return restaurantId;
 	}
 
 
 
-	public void setRestaurantId(long restaurantId) {
+	public void setRestaurantId(String restaurantId) {
 		this.restaurantId = restaurantId;
 	}
 
@@ -78,13 +78,13 @@ public class Items implements Serializable{
 
 
 
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
 
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 

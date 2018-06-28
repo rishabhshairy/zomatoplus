@@ -35,9 +35,6 @@ public class Users implements Serializable{
 
 	
 	
-	
-	
-	
 	public Users() {
 		super();
 		// TODO Auto-generated constructor stub

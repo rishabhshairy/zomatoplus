@@ -43,4 +43,9 @@ public class RestaurantController {
 		return item;
 			
 	}
+	
+	@GetMapping("/allItems")
+	public List<Items> allItems() {
+		return itemRepo.findAll();
+	}
 }
