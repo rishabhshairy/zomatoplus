@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration</title>
+</head>
+<body>
+<div class="well">
+	<form novalidate style="align-self: center;">
+		<table cellpadding="150">
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" data-ng-model="user.name"></td>
+			</tr>
+						<tr>
+				<td>Password</td>
+				<td><input type="password" data-ng-model="user.pwd"></td>
+			</tr>
+						<tr>
+				<td>E-mail:</td>
+				<td><input type="text" data-ng-model="user.email"></td>
+			</tr>
+						<tr>
+				<td>Phone</td>
+				<td><input type="text" data-ng-model="user.phone"></td>
+			</tr>
+						<tr>
+				<td>Rating</td>
+				<td><input type="number" data-ng-model="user.star"></td>
+			</tr>
+
+			<tr>
+				<td align="center">
+					<button data-ng-click="saveUser()">Register</button>
+				</td>
+			</tr>
+		</table>
+		<p>newUser={{user}}</p>
+		<div class="clearfix"></div>
+	<table class="table table-strip table-hover"
+	data-ng-init="fetchUser()">
+		
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>E-mail</b></td>
+			<td><b>Phone</b></td>
+			<td><b>Rating</b></td>
+		</tr>
+		<tr data-ng-repeat="item in users">
+			<td>{{item.name}}</td>
+			<td>{{item.email}}</td>
+			<td>{{item.phone}}</td>
+			<td>{{item.star}}</td>
+		</tr>
+	</table>
+	</form>
+</div>
+</body>
+</html>

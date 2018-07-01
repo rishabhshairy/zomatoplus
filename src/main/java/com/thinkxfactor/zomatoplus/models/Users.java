@@ -16,6 +16,7 @@ import javax.persistence.*;
 public class Users implements Serializable{
 	@Id
 	@GeneratedValue
+	@Column(name="id")
 	private long id;
 	
 	@Column(name="name",unique=true)

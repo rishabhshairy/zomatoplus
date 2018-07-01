@@ -42,12 +42,7 @@ public class UserController {
 	 @PostMapping("/create")
 	 public Users userCreate(@RequestBody Users user) {
 	
-		
-		//Users u1=new Users( "Rishabh", "1234","abc@gmail.com", "987654123",5);
-		 
-		 userRepo.saveAndFlush(user);
-		// System.out.println(user.toString());
-		 
+		userRepo.saveAndFlush(user);
 		 return user;
 		 
 	 }
@@ -55,7 +50,7 @@ public class UserController {
 	 @PostMapping("/login")
 	 public Users userLogin(@RequestBody Users user) {
 		       
-		return userRepo.findByNameAndPwd("abc","abc");
+		return userRepo.findByEmailAndPwd(user.getEmail(),user.getPwd());
 		 
 	 }
 	
